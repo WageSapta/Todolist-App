@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
 
 class CategoryController extends GetxController {
-  void search(String e) {
-    if (e.isEmpty) {
+  final searchContoller=TextEditingController();
+  void search() {
+    if (searchContoller.text.isEmpty) {
       Get.log('KOSONG');
+    }else{
+      
     }
-    Get.log(e);
   }
 }

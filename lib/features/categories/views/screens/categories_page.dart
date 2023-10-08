@@ -15,9 +15,9 @@ class CategoriesPage extends GetView<CategoryController> {
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
-          AppBarFormField(
-            onChanged: (e) => controller.search(e),
-          ),
+                    SearchSliverAppBar( controller:controller.searchContoller,
+                    onChanged:(a)=>controller.search(),
+),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               childCount: 20,
