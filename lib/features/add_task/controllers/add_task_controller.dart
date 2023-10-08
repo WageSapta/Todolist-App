@@ -19,6 +19,8 @@ class AddTaskController extends GetxController {
       dateCreated: DateTime.now(),
       dateDestination: date.value,
       isCompleted: false,
+      dateAddTask:selectedCategory.value?.id !=null? DateTime.now():null,
+
     );
     Get.log(model.toString());
     await DbService.putTask(model.id, model);
